@@ -7,9 +7,9 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Lab5.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="523">
-    <Grid>
-        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="19,29,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.518,0.433"/>
-        <TextBox x:Name="EmailTextbox" HorizontalAlignment="Left" Height="23" Margin="19,52,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="120"/>
+    <Grid HorizontalAlignment="Right" Width="515" Background="#FF575151">
+        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="29,29,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.518,0.433"/>
+        <TextBox x:Name="EmailTextbox" HorizontalAlignment="Left" Height="23" Margin="29,52,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="156"/>
 
         <ListBox x:Name="ListBoxUsers" 
                  
@@ -23,12 +23,12 @@
         </ListBox>
         <ListBox x:Name="ListboxAdmins" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="167" Margin="320,66,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="ListboxAdmins_SelectionChanged"/>
 
-        <Button x:Name="ChangeButton" Content="Change" HorizontalAlignment="Left" Margin="19,116,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="ButtonChange_Click"/>
-        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="19,89,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCreate_Click"/>
+        <Button x:Name="ChangeButton" Content="Change" HorizontalAlignment="Left" Margin="57,116,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="ButtonChange_Click" RenderTransformOrigin="1.008,0.706"/>
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="57,89,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCreate_Click"/>
         <Button x:Name="ButtonAdmin" Content="Make admin" HorizontalAlignment="Left" Margin="206,233,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="ButtonAdmin_Click"/>
         <Button x:Name="ButtonUser" Content="Make user" HorizontalAlignment="Left" Margin="320,233,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="ButtonUser_Click"/>
-        <Label x:Name="LabelInfo" Content="Info" HorizontalAlignment="Left" Margin="19,181,0,0" VerticalAlignment="Top" Height="74" Width="174"/>
-        <Button x:Name="ButtonRemove" Content="Remove" HorizontalAlignment="Left" Margin="19,143,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemove_Click" IsEnabled="False"/>
+        <Label x:Name="LabelInfo" Content="Info" HorizontalAlignment="Left" Margin="29,181,0,0" VerticalAlignment="Top" Height="74" Width="156" Background="White"/>
+        <Button x:Name="ButtonRemove" Content="Remove" HorizontalAlignment="Left" Margin="57,143,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemove_Click" IsEnabled="False" RenderTransformOrigin="0.954,0.506"/>
 
     </Grid>
 </Window>

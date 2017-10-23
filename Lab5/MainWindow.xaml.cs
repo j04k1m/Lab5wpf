@@ -48,8 +48,18 @@ namespace Lab5
         private void ButtonChange_Click(object sender, RoutedEventArgs e)
         {
             
-            ListBoxUsers.Items.Insert(ListBoxUsers.SelectedIndex, new User(UsernameTextbox.Text, EmailTextbox.Text));
-            ListBoxUsers.Items.RemoveAt(ListBoxUsers.SelectedIndex);
+
+
+            if (ListBoxUsers.SelectedIndex != -1)
+            {
+                ListBoxUsers.Items.Insert(ListBoxUsers.SelectedIndex, new User(UsernameTextbox.Text, EmailTextbox.Text));
+                ListBoxUsers.Items.RemoveAt(ListBoxUsers.SelectedIndex);
+            }
+            else if(ListboxAdmins.SelectedIndex != -1)
+            {
+                ListboxAdmins.Items.Insert(ListboxAdmins.SelectedIndex, new User(UsernameTextbox.Text, EmailTextbox.Text));
+                ListboxAdmins.Items.RemoveAt(ListboxAdmins.SelectedIndex);
+            }
         }
 
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
@@ -99,11 +109,13 @@ namespace Lab5
         {
             if(ListboxAdmins.SelectedIndex == -1)
             {
+                ChangeButton.IsEnabled = false;
                 ButtonUser.IsEnabled = false;
                 ButtonRemove.IsEnabled = false;
             }
             else if(ListboxAdmins.SelectedIndex != -1)
             {
+                ChangeButton.IsEnabled = true;
                 ButtonUser.IsEnabled = true;
                 ButtonRemove.IsEnabled = true;
                 LabelInfo.Content = "Username: " + ((User)ListboxAdmins.SelectedItem).Name + "\n" + "Email: " + ((User)ListboxAdmins.SelectedItem).Email;
